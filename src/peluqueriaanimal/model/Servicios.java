@@ -1,7 +1,6 @@
 package peluqueriaanimal.model;
 
 public class Servicios {
-  private int id;
   private int idServicio;
   private int tiposervice;
   private String descrip;
@@ -11,7 +10,21 @@ public class Servicios {
 
   public Servicios(){
     idServicioIncremento++;
-    this.id=idServicioIncremento;
+    this.idServicio=idServicioIncremento;
   }
 
+  //GETT
+  public int getIdServicio(){return this.idServicio;}
+  public int getTiposervice(){return this.tiposervice;}
+  public String getIDescrip(){return this.descrip;}
+  public int getTiempo(){return this.tiempo;}
+  public double getPrecio(){return this.precio;}
+
+
+  //SETT
+  public void setIdServicio(int id){this.idServicio=idServicio;}
+  public void setTiposervice(int tiposervice){this.tiposervice=tiposervice;}
+  public void setDescrip(String descrip){this.descrip=descrip;}
+  public void setTiempo(int tiempo){this.tiempo=tiempo;}
+  public void setPrecio(double precio){this.precio=precio;}
 }

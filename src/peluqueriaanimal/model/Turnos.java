@@ -13,6 +13,14 @@ public class Turnos {
     this.idTurno=idTurnosIncremento;
   }
 
+  //GET
+  public int getIdTurno(int idTurno){return this.idTurno;}
+  public String getFechaturno(String fechaturno){return this.fechaturno;}
+  public int getHoraturno(int horaturno){return this.horaturno;}
+  public String getEstadoturno(String idTurno){return this.estadoturno;}
+
+
+
 
 
 }
