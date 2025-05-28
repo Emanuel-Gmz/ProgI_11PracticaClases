@@ -9,6 +9,7 @@ public class Servicios {
   private static int idServicioIncremento;
 
 
+
   public Servicios(TipoService tipoService, String descrip, int tiempo, double precio) {
     idServicioIncremento++;
     this.idServicio=idServicioIncremento;
@@ -32,7 +33,17 @@ public class Servicios {
     System.out.println(this);
   }
 
-  //GETT
+  //Funcion para calcular el precio con IVA
+  public static double calcularPrecioConIVA(double precio) {
+    final double IVA = 0.21;
+    return precio + (precio * IVA);
+  }
+
+  public boolean esServicioLargo() {
+    return this.tiempo>60;
+  }
+
+  //GETTERS
   public int getIdServicio(){return this.idServicio;}
   public TipoService getTiposervice(){return this.tipoService;}
   public String getIDescrip(){return this.descrip;}
@@ -40,7 +51,7 @@ public class Servicios {
   public double getPrecio(){return this.precio;}
 
 
-  //SETT
+  //SETTERS
   public void setIdServicio(int id){this.idServicio=idServicio;}
   public void setTiposervice(TipoService tiposervice){this.tipoService= tipoService;}
   public void setDescrip(String descrip){this.descrip=descrip;}

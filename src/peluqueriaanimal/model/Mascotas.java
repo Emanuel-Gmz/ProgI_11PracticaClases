@@ -5,10 +5,8 @@ public class Mascotas {
   private String nombreMascota;
   private Especie especie;
   private String raza;
-
   private int edad;
   private String nombreDuenio;
-
   private static int idMascotaIncremento;
 
   public Mascotas(String nombreMascota,Especie especie,String raza,int edad,String nombreDuenio){
