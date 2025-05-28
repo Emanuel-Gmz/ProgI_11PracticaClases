@@ -30,7 +30,7 @@ public class Turnos {
         "\n Estado: " + estadoTurno +
         "\n Hora: "+ String.format("%02d:%02d",horaturno,minutosTurno) +
         "\n Mascota: " + mascota.getNombreMascota() + " Especie: " + mascota.getEspecie() + " Duenio: " + mascota.getNombreDuenio() +
-        "\n Servicio: " + servicios.getTiposervice() + " " + servicios.getIDescrip() + " Precio: " + Servicios.calcularPrecioConIVA(servicios.getPrecio()) +
+        "\n Servicio: " + servicios.getTiposervice() + " " + servicios.getDescrip() + " Precio: " + Servicios.calcularPrecioConIVA(servicios.getPrecio()) +
         "\n =============================";
   }
 

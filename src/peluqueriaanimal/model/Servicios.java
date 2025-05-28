@@ -19,6 +19,7 @@ public class Servicios {
     this.precio=precio;
   }
 
+  @Override
   public String toString() {
     return "       Servicio:   " +
         "\n Id: " + idServicio +
@@ -43,10 +44,32 @@ public class Servicios {
     return this.tiempo>60;
   }
 
+  @Override
+  public boolean equals(Object otroObj){
+    if (otroObj==null) return false;
+    //convertir a tipo servicio
+    Servicios servicios=(Servicios) otroObj;
+    //comparo para ver si todos los atributos son iguales
+    if (this.idServicio == servicios.getIdServicio() &&
+            this.descrip.equals(servicios.getDescrip()) &&
+            this.tiempo==servicios.getTiempo()&&
+            this.precio==(servicios.getPrecio()) &&
+            this.getTiposervice().equals(servicios.getTiposervice()))
+    return  true;
+    else
+      return false;
+  }
+
+  @Override
+  public int hashCode(){
+    int hash = 1;
+    return hash;
+  }
+
   //GETTERS
   public int getIdServicio(){return this.idServicio;}
   public TipoService getTiposervice(){return this.tipoService;}
-  public String getIDescrip(){return this.descrip;}
+  public String getDescrip(){return this.descrip;}
   public int getTiempo(){return this.tiempo;}
   public double getPrecio(){return this.precio;}
 
